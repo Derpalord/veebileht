@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 p {
-  text-align: center;
+  text-align: left;
   font-size: 60px;
   margin-top: 0px;
 }
@@ -31,7 +31,7 @@ function timeUntil(date) {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  //return [days, hours, minutes, seconds, distance, date];
+  return [days, hours, minutes, seconds, distance, date];
 }
 
 // Put all dates and ids into one array 
