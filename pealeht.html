@@ -1,20 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-<h1>Kõige viimaste eksamiteni jäänud aeg</h1>
-
+<h1>Viimane eksami tegemise võimalus</h1>
+<link rel="stylesheet" href="style.css">
+<br>
 <style>
 .Div1{
-    border: 5px outset black;
+    border: 5px outset rgb(27, 54, 93);
 background-color: white;
 text-align: center;
-}
+font-family:Helvetica, sans-serif; 
+font-size: 16px;}
 </style>
 <h2><a href="./Kõrgem matemaatika.html" >Kõrgem matemaatika</a></h2>
 <div class = "Div1">
     <h4>Kuupäev: 20. jaanuar</h4>
  <!-- Display the countdown timer in an element -->
-<p id="demo"></p>
+<p id="KM timer"></p>
 
 <script>
 // Set the date we're counting down to
@@ -36,13 +38,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("KM timer").innerHTML = days + " päeva " + hours + " tundi "
+  + minutes + " minutit " + seconds + " sekundit ";
 
   // If the count down is finished, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("KM timer").innerHTML = "eksam on läbi";
   }
 }, 1000);
 </script>
@@ -51,25 +53,76 @@ var x = setInterval(function() {
 <h2><a href="./MMP_leht.html" >Matemaatiline maailmapilt</a></h2>
 <div class = "Div1">
     <h4>Kuupäev: 18. jaanuar</h4>
-<p >MMP timer tuleb siia</p>
+<p id= "MMP timer"> </p>
+<script>
+var countDownDate2 = new Date("Jan 18, 2022 10:00:00").getTime();
+var y = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate2 - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("MMP timer").innerHTML = days + " päeva " + hours + " tundi "
+    + minutes + " minutit " + seconds + " sekundit ";
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("MMP timer").innerHTML = "Eksam on läbi";
+  }
+}, 1000);
+</script>
 </div>
 
 <h2><a href="./proge.html" >Programmeerimine</a></h2>
 <div class = "Div1">
     <h4>Kuupäev: 13. jaanuar</h4>
-<p >proge timer tuleb siia</p>
+<p id= "Proge timer"> </p>
+<script>
+var countDownDate3 = new Date("Jan 13, 2022 10:00:00").getTime();
+ var y = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate3 - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("Proge timer").innerHTML = days + " päeva " + hours + " tundi "
+    + minutes + " minutit " + seconds + " sekundit ";
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("Proge timer").innerHTML = "Eksam on läbi";
+    }
+}, 1000);
+</script>
 </div>
 
 <h2><a href="./sissejuhatus erialasse.html" >Sissejuhatus erialasse</a></h2>
 <div class = "Div1">
     <h4>Kuupäev: 12. jaanuar</h4>
-<p >Sissejuhatus erialasse timer tuleb siia</p>
+<p id= "Sissejuhatus erialasse timer"></p>
+<script>
+var countDownDate4 = new Date("Jan 12, 2022 10:00:00").getTime();
+var y = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate4 - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("Sissejuhatus erialasse timer").innerHTML = days + " päeva " + hours + " tundi "
+    + minutes + " minutit " + seconds + " sekundit ";
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("Sissejuhatus erialasse timer").innerHTML = "Eksam on läbi";
+    }
+}, 1000);
+</script>
 </div>
 
 <h2><a href="./AAR.html" >Arvuti arhitektuur ja riistvara</a></h2>
 <div class = "Div1">
     <h4>Kuupäev: pole veel teada</h4>
-<p >AAra timer tuleb siia// või ütleme, et aega veel ei tea </p>
+<p > - </p>
 </div>
 
 </body>
