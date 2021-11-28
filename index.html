@@ -20,7 +20,7 @@ font-size: 16px;}
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+var countDownDate = new Date("Jan 5, 2022 10:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -121,8 +121,25 @@ var y = setInterval(function() {
 
 <h2><a href="./AAR.html" >Arvuti arhitektuur ja riistvara</a></h2>
 <div class = "Div1">
-    <h4>Kuupäev: pole veel teada</h4>
-<p > - </p>
+    <h4>Kuupäev: 28. jaanuar</h4>
+<p id= "AARi timer"> - </p>
+<script>
+    var countDownDate5 = new Date("Jan 28, 2022 10:00:00").getTime();
+    var y = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate5 - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("AARi timer").innerHTML = days + " päeva " + hours + " tundi "
+        + minutes + " minutit " + seconds + " sekundit ";
+        if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("AARi timer").innerHTML = "Eksam on läbi";
+        }
+    }, 1000);
+    </script>
 </div>
 
 </body>
