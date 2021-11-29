@@ -4,7 +4,8 @@
 <h1>Viimane eksami tegemise võimalus</h1>
 <link rel="stylesheet" href="style.css">
 <br>
-<style>
+<!-- määrame n-ö kastikeste stiili (raam, tekst, taust) -->
+<style>  
 .Div1{
     border: 5px outset rgb(27, 54, 93);
 background-color: white;
@@ -15,33 +16,33 @@ font-size: 16px;}
 <h2><a href="./kõrgem_matemaatika.html" >Kõrgem matemaatika</a></h2>
 <div class = "Div1">
     <h4>Kuupäev: 20. jaanuar</h4>
- <!-- Display the countdown timer in an element -->
+ <!-- konkreetne muutuja/id konktreetse aine timerile -->
 <p id="KM timer"></p>
 
 <script>
-// Set the date we're counting down to
+// countdown alates eksami kuupäevast
 var countDownDate = new Date("Jan 5, 2022 10:00:00").getTime();
 
-// Update the count down every 1 second
+// uuendada timerit iga sekund
 var x = setInterval(function() {
 
-  // Get today's date and time
+  // saame tänase/hektelise kuupäeva ja aja
   var now = new Date().getTime();
 
-  // Find the distance between now and the count down date
+  // eksami kuupäev/aeg - hetkeline päev/aeg
   var distance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
+  // arvutab päevad, tunnid, minutid, sekundid
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
+  // näitab tulemust: id="demo", kus "demo" on vastavalt konkreetse aine muutuja/id
   document.getElementById("KM timer").innerHTML = days + " päeva " + hours + " tundi "
   + minutes + " minutit " + seconds + " sekundit ";
 
-  // If the count down is finished, write some text 
+  // kui eksam peaks möödas olema, väljastab teksti, et eksam on läbi 
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("KM timer").innerHTML = "eksam on läbi";
@@ -55,6 +56,7 @@ var x = setInterval(function() {
     <h4>Kuupäev: 18. jaanuar</h4>
 <p id= "MMP timer"> </p>
 <script>
+    // sama loogikaga timeri tegemine nagu enne
 var countDownDate2 = new Date("Jan 18, 2022 10:00:00").getTime();
 var y = setInterval(function() {
     var now = new Date().getTime();
@@ -78,6 +80,7 @@ var y = setInterval(function() {
     <h4>Kuupäev: 13. jaanuar</h4>
 <p id= "Proge timer"> </p>
 <script>
+     // sama loogikaga timeri tegemine nagu enne
 var countDownDate3 = new Date("Jan 13, 2022 10:00:00").getTime();
  var y = setInterval(function() {
     var now = new Date().getTime();
@@ -101,6 +104,7 @@ var countDownDate3 = new Date("Jan 13, 2022 10:00:00").getTime();
     <h4>Kuupäev: 12. jaanuar</h4>
 <p id= "Sissejuhatus erialasse timer"></p>
 <script>
+     // sama loogikaga timeri tegemine nagu enne
 var countDownDate4 = new Date("Jan 12, 2022 10:00:00").getTime();
 var y = setInterval(function() {
     var now = new Date().getTime();
@@ -124,6 +128,7 @@ var y = setInterval(function() {
     <h4>Kuupäev: 28. jaanuar</h4>
 <p id= "AARi timer"> - </p>
 <script>
+     // sama loogikaga timeri tegemine nagu enne
     var countDownDate5 = new Date("Jan 28, 2022 10:00:00").getTime();
     var y = setInterval(function() {
         var now = new Date().getTime();
